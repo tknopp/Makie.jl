@@ -30,6 +30,9 @@ mutable struct Scene <: AbstractScene
     "The [`Transformation`](@ref) of the Scene."
     transformation::Transformation
 
+    # should this be concrete with a bool or abstract with type dispatch?
+    data_normalization::DataNormalization
+
     "The plots contained in the Scene."
     plots::Vector{AbstractPlot}
 
@@ -113,7 +116,7 @@ function Scene(;
     end
     scene = Scene(
         parent, events, px_area, clear, cam, camera_controls,
-        transformation, plots, m_theme,
+        transformation, DataNormalization(), plots, m_theme,
         children, current_screens, bg, visible
     )
     if camera isa Function
@@ -368,6 +371,62 @@ function is2d(scene::SceneLike)
 end
 is2d(lims::Rect2) = true
 is2d(lims::Rect3) = widths(lims)[3] == 0.0
+
+
+# min/max if both are not NaN, value if one is NaN, else output NaN
+nan_min(x, y) = min(isnan(x) ? y : x, isnan(y) ? x : y)
+nan_max(x, y) = max(isnan(x) ? y : x, isnan(y) ? x : y)
+nan_to_zero(x::T) where {T} = isnan(x) ? zero(T) : x
+zero_to_one(x::T) where {T} = T(x + (x == zero(T)))
+function Base.isfinite(p::Union{Vec3{<: AbstractFloat}, Point3{<: AbstractFloat}})
+    all(isfinite.(p))
+end
+function renormalize!(scene::Scene, bbox::BBox3)
+    @info "Getting full limits"
+
+    _min = bbox.min
+    _max = bbox.max
+    for plot in scene.plots
+        _min = nan_min.(_min, plot.raw_bbox[].min)
+        _max = nan_max.(_max, plot.raw_bbox[].max)
+    end
+
+    scene.data_normalization.limits = BBox3(_min, _max)
+    raw_center = 0.5 .* nan_to_zero.(_min .+ _max) 
+    raw_widths = nan_to_zero.(_max .- _min)        
+    @info "$raw_center ± $raw_widths (raw)"
+
+    # if the normalized bbox is over- or underflows the bounds we need to adjust
+    # the linear transform
+    m, b = scene.data_normalization.transform
+    @info "$m x + $b (previous)"
+    lower = scene.data_normalization.renormalize_at.min
+    upper = scene.data_normalization.renormalize_at.max
+
+    # Do 0 -> 1 to be neutral with respect to lower, upper
+    center = m .* raw_center .+ b
+    widths = zero_to_one.(m .* raw_widths)
+    @info "$center ± $widths (transformed)"
+
+    if !(all(-upper .< center .< upper) && all(lower .< widths .< upper))
+        @info "Adjusting normalization."
+        # 0 -> 1 to not have Inf
+        m = 2.0 ./ zero_to_one.(raw_widths)
+        b = - m .* raw_center
+        @info "$m x + $b (new)"
+        if isfinite(m) && isfinite(b)
+            scene.data_normalization.transform = (m, b)
+            
+            # TODO: 
+            # This requires manual cleanup that I'm not doing yet. Also this should
+            # only affect primitive plots, otherwise we may normalize multiple times
+            scene.data_normalization.update[] = nothing
+        end
+
+        return true
+    end
+    return false
+end
 
 #####
 ##### Figure type

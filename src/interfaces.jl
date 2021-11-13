@@ -106,8 +106,8 @@ const atomic_function_symbols = (
 const atomic_functions = getfield.(Ref(Makie), atomic_function_symbols)
 const Atomic{Arg} = Union{map(x-> Combined{x, Arg}, atomic_functions)...}
 
-function (PT::Type{<: Combined})(parent, transformation, attributes, input_args, converted)
-    PT(parent, transformation, attributes, input_args, converted, AbstractPlot[])
+function (PT::Type{<: Combined})(parent, transformation, attributes, input_args, converted, bbox)
+    PT(parent, transformation, attributes, input_args, converted, bbox, AbstractPlot[])
 end
 
 """
@@ -186,7 +186,10 @@ function plot(scene::Scene, plot::AbstractPlot)
     return plot
 end
 
-function (PlotType::Type{<: AbstractPlot{Typ}})(scene::SceneLike, attributes::Attributes, input, args) where Typ
+function (PlotType::Type{<: AbstractPlot{Typ}})(
+        scene::SceneLike, attributes::Attributes, input, args, bbox
+    ) where Typ
+
     # The argument type of the final plot object is the assumened to stay constant after
     # argument conversion. This might not always hold, but it simplifies
     # things quite a bit
@@ -215,7 +218,7 @@ function (PlotType::Type{<: AbstractPlot{Typ}})(scene::SceneLike, attributes::At
         transformation.model
     end
     # create the plot, with the full attributes, the input signals, and the final signal nodes.
-    plot_obj = FinalType(scene, transformation, plot_attributes, input, seperate_tuple(args))
+    plot_obj = FinalType(scene, transformation, plot_attributes, input, seperate_tuple(args), bbox)
 
     calculated_attributes!(plot_obj)
     plot_obj
@@ -286,6 +289,7 @@ end
 Main plotting signatures that plot/plot! route to if no Plot Type is given
 """
 function plot!(scene::Union{Combined, SceneLike}, P::PlotFunc, attributes::Attributes, args...; kw_attributes...)
+    @info "plot! constructor"
     attributes = merge!(Attributes(kw_attributes), attributes)
     argvalues = to_value.(args)
     PreType = plottype(P, argvalues...)
@@ -296,19 +300,28 @@ function plot!(scene::Union{Combined, SceneLike}, P::PlotFunc, attributes::Attri
     kw_signal = if isempty(convert_keys) # lift(f) isn't supported so we need to catch the empty case
         Observable(())
     else
-        lift((args...)-> Pair.(convert_keys, args), getindex.(attributes, convert_keys)...) # make them one tuple to easier pass through
+        # make them one tuple to easier pass through
+        lift((args...)-> Pair.(convert_keys, args), getindex.(attributes, convert_keys)...) 
     end
+
+    # Set up normalization
+    norm = parent_scene(scene).data_normalization
+    raw_bbox = Observable(BBox3(Point3(Inf), Point3(-Inf)))
+    on(bb -> renormalize!(scene, bb), raw_bbox)
+    
     # call convert_arguments for a first time to get things started
-    converted = convert_arguments(PreType, argvalues...; kw_signal[]...)
+    converted = convert_normalize_arguments(
+        PreType, norm, raw_bbox, argvalues...; kw_signal[]...
+    )
     # convert_arguments can return different things depending on the recipe type
     # apply_conversion deals with that!
-
+    
     FinalType, argsconverted = apply_convert!(PreType, attributes, converted)
     converted_node = Observable(argsconverted)
     input_nodes =  convert.(Observable, args)
-    onany(kw_signal, lift(tuple, input_nodes...)) do kwargs, args
+    onany(norm.update, kw_signal, lift(tuple, input_nodes...)) do _, kwargs, args
         # do the argument conversion inside a lift
-        result = convert_arguments(FinalType, args...; kwargs...)
+        result = convert_normalize_arguments(FinalType, norm, raw_bbox, args...; kwargs...)
         finaltype, argsconverted = apply_convert!(FinalType, attributes, result)
         if finaltype != FinalType
             error("Plot type changed from $FinalType to $finaltype after conversion.
@@ -317,7 +330,8 @@ function plot!(scene::Union{Combined, SceneLike}, P::PlotFunc, attributes::Attri
         end
         converted_node[] = argsconverted
     end
-    plot!(scene, FinalType, attributes, input_nodes, converted_node)
+
+    plot!(scene, FinalType, attributes, input_nodes, converted_node, raw_bbox)
 end
 
 plot!(p::Combined) = _plot!(p)
@@ -355,7 +369,7 @@ end
 
 function show_attributes(attributes)
     for (k, v) in attributes
-        println("    ", k, ": ", v[] == nothing ? "nothing" : v[])
+        println("    ", k, ": ", v[] === nothing ? "nothing" : v[])
     end
 end
 
@@ -390,10 +404,14 @@ function extract_scene_attributes!(attributes)
     return result
 end
 
-function plot!(scene::SceneLike, P::PlotFunc, attributes::Attributes, input::NTuple{N, Observable}, args::Observable) where {N}
+function plot!(
+        scene::SceneLike, P::PlotFunc, attributes::Attributes, input::NTuple{N, Observable}, 
+        args::Observable, bbox::Observable{BBox3}
+    ) where {N}
+    
     # create "empty" plot type - empty meaning containing no plots, just attributes + arguments
     scene_attributes = extract_scene_attributes!(attributes)
-    plot_object = P(scene, copy(attributes), input, args)
+    plot_object = P(scene, copy(attributes), input, args, bbox)
     # transfer the merged attributes from theme and user defined to the scene
     for (k, v) in scene_attributes
         error("setting $k for scene via plot attribute not supported anymore")
@@ -404,10 +422,13 @@ function plot!(scene::SceneLike, P::PlotFunc, attributes::Attributes, input::NTu
     return plot_object
 end
 
-function plot!(scene::Combined, P::PlotFunc, attributes::Attributes, input::NTuple{N,Observable}, args::Observable) where {N}
-    # create "empty" plot type - empty meaning containing no plots, just attributes + arguments
+function plot!(
+        scene::Combined, P::PlotFunc, attributes::Attributes, input::NTuple{N,Observable}, 
+        args::Observable, bbox::Observable{BBox3}
+    ) where {N}
 
-    plot_object = P(scene, attributes, input, args)
+    # create "empty" plot type - empty meaning containing no plots, just attributes + arguments
+    plot_object = P(scene, attributes, input, args, bbox)
     # call user defined recipe overload to fill the plot type
     plot!(plot_object)
     push!(scene.plots, plot_object)

@@ -27,6 +27,7 @@ struct Combined{Typ, T} <: ScenePlot{Typ}
     attributes::Attributes
     input_args::Tuple
     converted::Tuple
+    raw_bbox::Observable
     plots::Vector{AbstractPlot}
 end
 

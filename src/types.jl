@@ -260,6 +260,41 @@ struct Transformation <: Transformable
     end
 end
 
+
+# Could probably just use Rect3{Float64}... Though maybe this form is better for
+# performance and easier to handle?
+struct BBox3
+    min::Point3{Float64}
+    max::Point3{Float64}
+end
+
+# I don't think raw scenes should do always be doing this stuff... 
+# Maybe we can add a `NoNormalization` or attach it to Axis?
+mutable struct DataNormalization
+    # min and max width of x/y/z limits
+    renormalize_at::BBox3
+    # coefficiencts (m, b) for linear transform m .* v .+ b
+    transform::Tuple{Vec3{Float64}, Vec3{Float64}}
+    # full pre-transform limits - TODO do we need this? should we have it boundingbox()?
+    limits::BBox3
+    # to trigger updates
+    update::Observable{Nothing}
+end
+function DataNormalization(min::Union{Vec3, Point3}, max::Union{Vec3, Point3})
+    DataNormalization(
+        BBox3(Point3{Float64}(min...), Point3{Float64}(max...)), 
+        (Vec3{Float64}(1),   Vec3{Float64}(0)),
+        BBox3(Point3{Float64}(NaN), Point3{Float64}(NaN)),
+        Observable(nothing)
+    )
+end
+function DataNormalization(min::Union{Vec2, Point2}, max::Union{Vec2, Point2})
+    DataNormalization(Vec3(min..., 1), Vec3(max..., 0))
+end
+DataNormalization(min, max) = DataNormalization(Vec3{Float64}(min), Vec3{Float64}(max))
+DataNormalization() = DataNormalization(1e-3, 1e3)
+
+
 """
 `PlotSpec{P<:AbstractPlot}(args...; kwargs...)`
 

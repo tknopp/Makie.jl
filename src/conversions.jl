@@ -1,4 +1,79 @@
 ################################################################################
+# Data Normalization
+################################################################################
+
+
+function convert_normalize_arguments(
+        @nospecialize(T), norm::DataNormalization, 
+        bbox::Observable{BBox3}, args...; kwargs...
+    )
+
+    @info "convert_normalize_arguments generic"
+    converted = convert_arguments(T, args...; kwargs...)
+    @info typeof(converted)
+    update_limits!(norm, bbox, converted)
+    prenormalize(norm, converted)
+end
+
+function convert_normalize_arguments(
+        @nospecialize(T), norm::DataNormalization, 
+        bbox::Observable{BBox3}, ys::Vector{Float64}; kwargs...
+    )
+
+    @info "convert_normalize_arguments ys"
+    converted = (Point2{Float64}.(enumerate(ys)),)
+    @info typeof(converted)
+    update_limits!(norm, bbox, converted)
+    prenormalize(norm, converted)
+end
+
+function convert_normalize_arguments(
+        @nospecialize(T), norm::DataNormalization, bbox::Observable{BBox3}, 
+        xs::Vector{Float64}, ys::Vector{Float64}; kwargs...
+    )
+    @info "convert_normalize_arguments xs ys"
+    converted = (Point2{Float64}.(xs, ys),)
+    update_limits!(norm, bbox, converted)
+    prenormalize(norm, converted)
+end
+
+function update_limits!(
+        norm::DataNormalization, bbox::Observable{BBox3}, 
+        converted::Tuple{Vector{<: Point2}}
+    )
+    @info "Updating plot limits"
+
+    # using NaN as "ignore this value"
+    _min = Vec2{Float64}(NaN) 
+    _max = Vec2{Float64}(NaN)
+    for p in converted[1]
+        _min = nan_min.(_min, p)
+        _max = nan_max.(_max, p)
+    end
+    # This triggers `renormalize!(scene, bbox)` which updates the linear 
+    # transform if necessary. In that case every already connected plot will
+    # recompute its plot.converted. 
+    bbox[] = BBox3(
+        Point3(_min[1], _min[2], NaN), 
+        Point3(_max[1], _max[2], NaN)
+    )
+
+    nothing
+end
+
+# Probably needs a better name...
+function prenormalize(norm::DataNormalization, converted)
+    converted
+end
+function prenormalize(norm::DataNormalization, converted::Tuple{Vector{<: Point2}})
+    @info "Applying Normalization"
+    m = norm.transform[1][Vec2(1, 2)]
+    b = norm.transform[2][Vec2(1, 2)]
+    (map(p -> Point2f(m .* p .+ b), converted[1]),)
+end
+
+
+###############################################################################
 #                               Type Conversions                               #
 ################################################################################
 const RangeLike = Union{AbstractRange, AbstractVector, ClosedInterval}
