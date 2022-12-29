@@ -5,391 +5,391 @@ title_boost = "Ridiculous"
 url_prefix = "/previews/PR2533/"
 
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/J77Nj0ubaXcMhDvfGm9o.html"
+    path = "/tmp/jl_tDiGu0/J77Nj0ubaXcMhDvfGm9o.html"
     title = "404"
     url = "404.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/thEsWPYs0AJSDTIMX87s.html"
+    path = "/tmp/jl_tDiGu0/thEsWPYs0AJSDTIMX87s.html"
     title = "Home"
     url = "index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/yHibnECfxNCL6qcLUlCx.html"
+    path = "/tmp/jl_tDiGu0/yHibnECfxNCL6qcLUlCx.html"
     title = "API"
     url = "api/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/jrryVCVUrj9zvvHaYBp4.html"
+    path = "/tmp/jl_tDiGu0/jrryVCVUrj9zvvHaYBp4.html"
     title = "Documentation"
     url = "documentation/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/bG2oil4FzstnIWl8uNXX.html"
+    path = "/tmp/jl_tDiGu0/bG2oil4FzstnIWl8uNXX.html"
     title = "Animations"
     url = "documentation/animation/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/e09caTrT7HfanSoZjFqD.html"
+    path = "/tmp/jl_tDiGu0/e09caTrT7HfanSoZjFqD.html"
     title = "Backends"
     url = "documentation/backends/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Tn54HQMFvlCHrs5gFj4N.html"
+    path = "/tmp/jl_tDiGu0/Tn54HQMFvlCHrs5gFj4N.html"
     title = "CairoMakie"
     url = "documentation/backends/cairomakie/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/bY7MB0ieKLwILceIo3us.html"
+    path = "/tmp/jl_tDiGu0/bY7MB0ieKLwILceIo3us.html"
     title = "GLMakie"
     url = "documentation/backends/glmakie/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/deJQsvrq21dlyg6GOQWe.html"
+    path = "/tmp/jl_tDiGu0/deJQsvrq21dlyg6GOQWe.html"
     title = "RPRMakie"
     url = "documentation/backends/rprmakie/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/mQB3ONUFAFqskovVgFdD.html"
+    path = "/tmp/jl_tDiGu0/mQB3ONUFAFqskovVgFdD.html"
     title = "WGLMakie"
     url = "documentation/backends/wglmakie/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/mkPNh0sVaUYr2eoKYECL.html"
+    path = "/tmp/jl_tDiGu0/mkPNh0sVaUYr2eoKYECL.html"
     title = "Blocks"
     url = "documentation/blocks/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/BEWrYvpkz2SY7Xg3c34v.html"
+    path = "/tmp/jl_tDiGu0/BEWrYvpkz2SY7Xg3c34v.html"
     title = "Cameras"
     url = "documentation/cameras/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/kgmIfI5jiH6R2hlNNHAt.html"
+    path = "/tmp/jl_tDiGu0/kgmIfI5jiH6R2hlNNHAt.html"
     title = "Colors"
     url = "documentation/colors/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/sr4474r8Rq8YWs2mzlzq.html"
+    path = "/tmp/jl_tDiGu0/sr4474r8Rq8YWs2mzlzq.html"
     title = "Events"
     url = "documentation/events/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Ha7AqihkLbowhgho2R8i.html"
+    path = "/tmp/jl_tDiGu0/Ha7AqihkLbowhgho2R8i.html"
     title = "Frequently Asked Questions"
     url = "documentation/faq/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/mlivK3821zZ4iwvA5SqY.html"
+    path = "/tmp/jl_tDiGu0/mlivK3821zZ4iwvA5SqY.html"
     title = "Figures"
     url = "documentation/figure/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/ALXoTE3MbVkGRyllxnlv.html"
+    path = "/tmp/jl_tDiGu0/ALXoTE3MbVkGRyllxnlv.html"
     title = "Exporting a Figure with physical dimensions"
     url = "documentation/figure_size/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/ipkM3FONTIuFzxbRbMuh.html"
+    path = "/tmp/jl_tDiGu0/ipkM3FONTIuFzxbRbMuh.html"
     title = "Fonts"
     url = "documentation/fonts/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/w0FGwIJc2wZeaum8P4um.html"
+    path = "/tmp/jl_tDiGu0/w0FGwIJc2wZeaum8P4um.html"
     title = "Headless"
     url = "documentation/headless/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/H9yQRTEbD7EacJYPhBNQ.html"
+    path = "/tmp/jl_tDiGu0/H9yQRTEbD7EacJYPhBNQ.html"
     title = "Inspecting Data"
     url = "documentation/inspector/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Z8jFSyoEiYQLRj94yjNf.html"
+    path = "/tmp/jl_tDiGu0/Z8jFSyoEiYQLRj94yjNf.html"
     title = "LaTeX"
     url = "documentation/latex/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/7LUWJwlUBIvYRsaKLwNP.html"
+    path = "/tmp/jl_tDiGu0/7LUWJwlUBIvYRsaKLwNP.html"
     title = "How layouts work"
     url = "documentation/layouting/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/2G2QbBy9RV9yqWw3VmuY.html"
+    path = "/tmp/jl_tDiGu0/2G2QbBy9RV9yqWw3VmuY.html"
     title = "Lighting"
     url = "documentation/lighting/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/GR3rGwYR31jpGrhGRpRF.html"
+    path = "/tmp/jl_tDiGu0/GR3rGwYR31jpGrhGRpRF.html"
     title = "Observables & Interaction"
     url = "documentation/nodes/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/gSvkGAKjthAqjwkOfoin.html"
+    path = "/tmp/jl_tDiGu0/gSvkGAKjthAqjwkOfoin.html"
     title = "Plot Method Signatures"
     url = "documentation/plot_method_signatures/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/0If5RZyQdvIdz6RTBgOb.html"
+    path = "/tmp/jl_tDiGu0/0If5RZyQdvIdz6RTBgOb.html"
     title = "Plot Recipes"
     url = "documentation/recipes/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/GBOxFqFArPWZxLHPLmDf.html"
+    path = "/tmp/jl_tDiGu0/GBOxFqFArPWZxLHPLmDf.html"
     title = "Scenes"
     url = "documentation/scenes/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/aXdFYSGuidlUcgnfhYJt.html"
+    path = "/tmp/jl_tDiGu0/aXdFYSGuidlUcgnfhYJt.html"
     title = "Theming"
     url = "documentation/theming/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/ZAOoCajNCWlnQXN3uIgK.html"
+    path = "/tmp/jl_tDiGu0/ZAOoCajNCWlnQXN3uIgK.html"
     title = "Predefined themes"
     url = "documentation/theming/predefined_themes/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/GwQEkND5dSWRUNTvDSff.html"
+    path = "/tmp/jl_tDiGu0/GwQEkND5dSWRUNTvDSff.html"
     title = "Basic transparency"
     url = "documentation/transparency/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/RGVejMebymF0U2ojtbiq.html"
+    path = "/tmp/jl_tDiGu0/RGVejMebymF0U2ojtbiq.html"
     title = "Examples"
     url = "examples/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/6GY4lbetWhrqwerQrWrw.html"
+    path = "/tmp/jl_tDiGu0/6GY4lbetWhrqwerQrWrw.html"
     title = "Blocks & Widgets"
     url = "examples/blocks/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/lkg7gOL1ZNmJDZnx8B7P.html"
+    path = "/tmp/jl_tDiGu0/lkg7gOL1ZNmJDZnx8B7P.html"
     title = "Axis"
     url = "examples/blocks/axis/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/RoCmTSmFSvNPoacsNzzd.html"
+    path = "/tmp/jl_tDiGu0/RoCmTSmFSvNPoacsNzzd.html"
     title = "Axis3"
     url = "examples/blocks/axis3/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/BkWUqQrp11SBDU0C1DQH.html"
+    path = "/tmp/jl_tDiGu0/BkWUqQrp11SBDU0C1DQH.html"
     title = "Box"
     url = "examples/blocks/box/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/tMXz9kpwSTSff2ZaA5DP.html"
+    path = "/tmp/jl_tDiGu0/tMXz9kpwSTSff2ZaA5DP.html"
     title = "Button"
     url = "examples/blocks/button/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Q3oWaY80KTmFDBOf8GTY.html"
+    path = "/tmp/jl_tDiGu0/Q3oWaY80KTmFDBOf8GTY.html"
     title = "Colorbar"
     url = "examples/blocks/colorbar/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/sZo0vB60gN1WcGomiIe7.html"
+    path = "/tmp/jl_tDiGu0/sZo0vB60gN1WcGomiIe7.html"
     title = "GridLayout"
     url = "examples/blocks/gridlayout/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/GEM1MmqxwmxCv8PAVFED.html"
+    path = "/tmp/jl_tDiGu0/GEM1MmqxwmxCv8PAVFED.html"
     title = "IntervalSlider"
     url = "examples/blocks/intervalslider/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/3t6UZCBAOUCE6CpS5jK6.html"
+    path = "/tmp/jl_tDiGu0/3t6UZCBAOUCE6CpS5jK6.html"
     title = "Label"
     url = "examples/blocks/label/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/6jGrt6tqrynW94Ce47mI.html"
+    path = "/tmp/jl_tDiGu0/6jGrt6tqrynW94Ce47mI.html"
     title = "Legend"
     url = "examples/blocks/legend/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/oQPBTEhp080QreLo27oE.html"
+    path = "/tmp/jl_tDiGu0/oQPBTEhp080QreLo27oE.html"
     title = "LScene"
     url = "examples/blocks/lscene/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/gA1DkEkde8ZzlNr4Iwbu.html"
+    path = "/tmp/jl_tDiGu0/gA1DkEkde8ZzlNr4Iwbu.html"
     title = "Menu"
     url = "examples/blocks/menu/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/y3nb7BvwlL4o4hb4ZUKz.html"
+    path = "/tmp/jl_tDiGu0/y3nb7BvwlL4o4hb4ZUKz.html"
     title = "Slider"
     url = "examples/blocks/slider/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/jeuQqC6RQYafNR2YIkY7.html"
+    path = "/tmp/jl_tDiGu0/jeuQqC6RQYafNR2YIkY7.html"
     title = "SliderGrid"
     url = "examples/blocks/slidergrid/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/qKpxo3V2dlcANMwqYM2X.html"
+    path = "/tmp/jl_tDiGu0/qKpxo3V2dlcANMwqYM2X.html"
     title = "Textbox"
     url = "examples/blocks/textbox/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/1RBOLSxokYLVI9RVGrSd.html"
+    path = "/tmp/jl_tDiGu0/1RBOLSxokYLVI9RVGrSd.html"
     title = "Toggle"
     url = "examples/blocks/toggle/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/8obfcEM7OjCmp78y1r36.html"
+    path = "/tmp/jl_tDiGu0/8obfcEM7OjCmp78y1r36.html"
     title = "Plotting functions"
     url = "examples/plotting_functions/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/ubix4lmFwTUxoLI88bR4.html"
+    path = "/tmp/jl_tDiGu0/ubix4lmFwTUxoLI88bR4.html"
     title = "ablines"
     url = "examples/plotting_functions/ablines/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/ddZV5DHY2Bm5Ui5IA39d.html"
+    path = "/tmp/jl_tDiGu0/ddZV5DHY2Bm5Ui5IA39d.html"
     title = "arrows"
     url = "examples/plotting_functions/arrows/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/NkHatvhnRmkdvQO5JRNC.html"
+    path = "/tmp/jl_tDiGu0/NkHatvhnRmkdvQO5JRNC.html"
     title = "band"
     url = "examples/plotting_functions/band/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/7ZE0V0rkt2LmwTxnlHxw.html"
+    path = "/tmp/jl_tDiGu0/7ZE0V0rkt2LmwTxnlHxw.html"
     title = "barplot"
     url = "examples/plotting_functions/barplot/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/7sDVbs2XrYcKj3Ssk2f8.html"
+    path = "/tmp/jl_tDiGu0/7sDVbs2XrYcKj3Ssk2f8.html"
     title = "boxplot"
     url = "examples/plotting_functions/boxplot/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/BpIka3RXk16jBt1HWl23.html"
+    path = "/tmp/jl_tDiGu0/BpIka3RXk16jBt1HWl23.html"
     title = "contour"
     url = "examples/plotting_functions/contour/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/6THQPbKEosNDEvWHfMux.html"
+    path = "/tmp/jl_tDiGu0/6THQPbKEosNDEvWHfMux.html"
     title = "contour3d"
     url = "examples/plotting_functions/contour3d/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/K7AKhEEUmCz4nYNTd97i.html"
+    path = "/tmp/jl_tDiGu0/K7AKhEEUmCz4nYNTd97i.html"
     title = "contourf"
     url = "examples/plotting_functions/contourf/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Gwtt2jyWRVWSHpd8U4kZ.html"
+    path = "/tmp/jl_tDiGu0/Gwtt2jyWRVWSHpd8U4kZ.html"
     title = "crossbar"
     url = "examples/plotting_functions/crossbar/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/4RYuGOLjpSFxwevfFEPo.html"
+    path = "/tmp/jl_tDiGu0/4RYuGOLjpSFxwevfFEPo.html"
     title = "density"
     url = "examples/plotting_functions/density/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/UsUF01LKXZXvTRO6ncKx.html"
+    path = "/tmp/jl_tDiGu0/UsUF01LKXZXvTRO6ncKx.html"
     title = "ecdfplot"
     url = "examples/plotting_functions/ecdf/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/WQeo7m5ge90UuDtYW5kr.html"
+    path = "/tmp/jl_tDiGu0/WQeo7m5ge90UuDtYW5kr.html"
     title = "errorbars"
     url = "examples/plotting_functions/errorbars/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/lqvHXwh2W4MSO6hIzkVG.html"
+    path = "/tmp/jl_tDiGu0/lqvHXwh2W4MSO6hIzkVG.html"
     title = "heatmap"
     url = "examples/plotting_functions/heatmap/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/tT2mu6OjCQrtyJF7zDlW.html"
+    path = "/tmp/jl_tDiGu0/tT2mu6OjCQrtyJF7zDlW.html"
     title = "hexbin"
     url = "examples/plotting_functions/hexbin/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/FkwK27RzYGpUf1vFAIcu.html"
+    path = "/tmp/jl_tDiGu0/FkwK27RzYGpUf1vFAIcu.html"
     title = "hist"
     url = "examples/plotting_functions/hist/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/bTwiHRi3h0tQ0s22Jq4T.html"
+    path = "/tmp/jl_tDiGu0/bTwiHRi3h0tQ0s22Jq4T.html"
     title = "hlines and vlines"
     url = "examples/plotting_functions/hvlines/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Kr9HGDhZ1hY22h1Hw6Bm.html"
+    path = "/tmp/jl_tDiGu0/Kr9HGDhZ1hY22h1Hw6Bm.html"
     title = "hspan and vspan"
     url = "examples/plotting_functions/hvspan/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/DaYVsGb1MaX5KZiYlLj1.html"
+    path = "/tmp/jl_tDiGu0/DaYVsGb1MaX5KZiYlLj1.html"
     title = "image"
     url = "examples/plotting_functions/image/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/dATeE8rmCoEA67hRr9yG.html"
+    path = "/tmp/jl_tDiGu0/dATeE8rmCoEA67hRr9yG.html"
     title = "lines"
     url = "examples/plotting_functions/lines/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/fgDBa9m5mjAYOQ2d7FCE.html"
+    path = "/tmp/jl_tDiGu0/fgDBa9m5mjAYOQ2d7FCE.html"
     title = "linesegments"
     url = "examples/plotting_functions/linesegments/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/l7hvE4w5d2J4m3UyRMED.html"
+    path = "/tmp/jl_tDiGu0/l7hvE4w5d2J4m3UyRMED.html"
     title = "mesh"
     url = "examples/plotting_functions/mesh/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/QLQo5vA0KZD7YJmU2iYs.html"
+    path = "/tmp/jl_tDiGu0/QLQo5vA0KZD7YJmU2iYs.html"
     title = "meshscatter"
     url = "examples/plotting_functions/meshscatter/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/SNh0szT9yFZhcimMzum0.html"
+    path = "/tmp/jl_tDiGu0/SNh0szT9yFZhcimMzum0.html"
     title = "pie"
     url = "examples/plotting_functions/pie/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/PszoM3yrBLegXQkKO5Cc.html"
+    path = "/tmp/jl_tDiGu0/PszoM3yrBLegXQkKO5Cc.html"
     title = "poly"
     url = "examples/plotting_functions/poly/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/2qDUKKx3QPWmlg7urOuB.html"
+    path = "/tmp/jl_tDiGu0/2qDUKKx3QPWmlg7urOuB.html"
     title = "qqplot and qqnorm"
     url = "examples/plotting_functions/qqplot/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/n1QigiZ91Uis01hFqVsV.html"
+    path = "/tmp/jl_tDiGu0/n1QigiZ91Uis01hFqVsV.html"
     title = "rainclouds"
     url = "examples/plotting_functions/rainclouds/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/mRK8xqggnjU1zo43AoRn.html"
+    path = "/tmp/jl_tDiGu0/mRK8xqggnjU1zo43AoRn.html"
     title = "rangebars"
     url = "examples/plotting_functions/rangebars/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Ee4od5eYjFOFvaNuKCfS.html"
+    path = "/tmp/jl_tDiGu0/Ee4od5eYjFOFvaNuKCfS.html"
     title = "scatter"
     url = "examples/plotting_functions/scatter/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/e9p8Y7CYXhCDbHEeu9mU.html"
+    path = "/tmp/jl_tDiGu0/e9p8Y7CYXhCDbHEeu9mU.html"
     title = "scatterlines"
     url = "examples/plotting_functions/scatterlines/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/NZxBgCGy3sC5lrnhJkZl.html"
+    path = "/tmp/jl_tDiGu0/NZxBgCGy3sC5lrnhJkZl.html"
     title = "series"
     url = "examples/plotting_functions/series/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/VtSh4DCky8qrUE8Cazac.html"
+    path = "/tmp/jl_tDiGu0/VtSh4DCky8qrUE8Cazac.html"
     title = "spy"
     url = "examples/plotting_functions/spy/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/AP2rQMKKAdbSVKuTCp3X.html"
+    path = "/tmp/jl_tDiGu0/AP2rQMKKAdbSVKuTCp3X.html"
     title = "stairs"
     url = "examples/plotting_functions/stairs/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/2E6HsU4FMN6lWQWtLp6l.html"
+    path = "/tmp/jl_tDiGu0/2E6HsU4FMN6lWQWtLp6l.html"
     title = "stem"
     url = "examples/plotting_functions/stem/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/FqoiX40eY3IZ2lXP4ERZ.html"
+    path = "/tmp/jl_tDiGu0/FqoiX40eY3IZ2lXP4ERZ.html"
     title = "streamplot"
     url = "examples/plotting_functions/streamplot/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/vfTVmlO1sem3TTjCblt0.html"
+    path = "/tmp/jl_tDiGu0/vfTVmlO1sem3TTjCblt0.html"
     title = "surface"
     url = "examples/plotting_functions/surface/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/Xyvrzgik4H4c4ykDdBAj.html"
+    path = "/tmp/jl_tDiGu0/Xyvrzgik4H4c4ykDdBAj.html"
     title = "text"
     url = "examples/plotting_functions/text/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/sYa0Cj3ZcZ13Oswn1mgc.html"
+    path = "/tmp/jl_tDiGu0/sYa0Cj3ZcZ13Oswn1mgc.html"
     title = "tooltip"
     url = "examples/plotting_functions/tooltip/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/xtZwA0AkOff4FilR9y8i.html"
+    path = "/tmp/jl_tDiGu0/xtZwA0AkOff4FilR9y8i.html"
     title = "tricontourf"
     url = "examples/plotting_functions/tricontourf/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/MlToQlbT0TRADkIhPZyi.html"
+    path = "/tmp/jl_tDiGu0/MlToQlbT0TRADkIhPZyi.html"
     title = "violin"
     url = "examples/plotting_functions/violin/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/lQBJYxu9idXKd05Uq39S.html"
+    path = "/tmp/jl_tDiGu0/lQBJYxu9idXKd05Uq39S.html"
     title = "volume"
     url = "examples/plotting_functions/volume/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/lBnZjUZmqWWIlmeJi1xZ.html"
+    path = "/tmp/jl_tDiGu0/lBnZjUZmqWWIlmeJi1xZ.html"
     title = "volumeslices"
     url = "examples/plotting_functions/volumeslices/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/6zCkVcQPy9sIvhTQelwS.html"
+    path = "/tmp/jl_tDiGu0/6zCkVcQPy9sIvhTQelwS.html"
     title = "waterfall"
     url = "examples/plotting_functions/waterfall/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/z5pjEjG1sUuxUvGIauWk.html"
+    path = "/tmp/jl_tDiGu0/z5pjEjG1sUuxUvGIauWk.html"
     title = "wireframe"
     url = "examples/plotting_functions/wireframe/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/mSm0l60aIEbK2AqFsqQP.html"
+    path = "/tmp/jl_tDiGu0/mSm0l60aIEbK2AqFsqQP.html"
     title = "Search"
     url = "search/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/OkCFIFoD88ZpHxSTdiwr.html"
+    path = "/tmp/jl_tDiGu0/OkCFIFoD88ZpHxSTdiwr.html"
     title = "Tutorials"
     url = "tutorials/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/2SUyFuECif2LQvUsDuV7.html"
+    path = "/tmp/jl_tDiGu0/2SUyFuECif2LQvUsDuV7.html"
     title = "Aspect ratio and size control tutorial"
     url = "tutorials/aspect-tutorial/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/33YSSq3QM0Ubxg832BrI.html"
+    path = "/tmp/jl_tDiGu0/33YSSq3QM0Ubxg832BrI.html"
     title = "Basic Tutorial"
     url = "tutorials/basic-tutorial/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/3sWj8zfnfllOwDZBG6k8.html"
+    path = "/tmp/jl_tDiGu0/3sWj8zfnfllOwDZBG6k8.html"
     title = "Layout Tutorial"
     url = "tutorials/layout-tutorial/index.html"
     [[input.files]]
-    path = "/tmp/jl_DuZhz9/FMYtJZK90dy8IearSVam.html"
+    path = "/tmp/jl_tDiGu0/FMYtJZK90dy8IearSVam.html"
     title = "Scene tutorial"
     url = "tutorials/scenes/index.html"
 
