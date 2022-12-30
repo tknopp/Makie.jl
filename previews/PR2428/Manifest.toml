@@ -623,11 +623,9 @@ version = "0.21.3"
 
 [[deps.JSServe]]
 deps = ["Base64", "CodecZlib", "Colors", "Dates", "Deno_jll", "HTTP", "Hyperscript", "LinearAlgebra", "Markdown", "MsgPack", "Observables", "RelocatableFolders", "SHA", "Sockets", "Tables", "Test", "URIs", "UUIDs", "WidgetsBase"]
-git-tree-sha1 = "9cf8468f819b8b50e2bb133da27d295ef4168b0a"
-repo-rev = "sd/pluto"
-repo-url = "https://github.com/SimonDanisch/JSServe.jl.git"
+git-tree-sha1 = "0fd463caf1bd4b5ed0d7bd0e3935dd6e25ef42bb"
 uuid = "824d6782-a2ef-11e9-3a09-e5662e0c26f9"
-version = "1.2.9"
+version = "2.0.0"
 
 [[deps.JpegTurbo]]
 deps = ["CEnum", "FileIO", "ImageCore", "JpegTurbo_jll", "TOML"]
