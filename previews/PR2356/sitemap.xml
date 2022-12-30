@@ -368,6 +368,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>github.com/MakieOrg/Makie.jl.git/examples/plotting_functions/bracket/index.html</loc>
+    <lastmod>2022-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>github.com/MakieOrg/Makie.jl.git/examples/plotting_functions/poly/index.html</loc>
     <lastmod>2022-12-30</lastmod>
     <changefreq>monthly</changefreq>
