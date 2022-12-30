@@ -266,12 +266,6 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>github.com/MakieOrg/Makie.jl.git/documentation/figure_size/index.html</loc>
-    <lastmod>2022-12-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
     <loc>github.com/MakieOrg/Makie.jl.git/examples/plotting_functions/streamplot/index.html</loc>
     <lastmod>2022-12-30</lastmod>
     <changefreq>monthly</changefreq>
